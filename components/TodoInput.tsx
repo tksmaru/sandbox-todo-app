@@ -11,20 +11,23 @@ const TodoInput: React.FC<TodoInputProps> = ({ onAdd }) => {
   const [isComposing, setIsComposing] = useState(false);
 
   return (
-    <input
-      type="text"
-      value={newTodoText}
-      onChange={e => setNewTodoText(e.target.value)}
-      onKeyDown={e => {
-        if (!isComposing && e.key === 'Enter' && newTodoText.trim()) {
-          onAdd(newTodoText.trim());
-          setNewTodoText('');
-        }
-      }}
-      onCompositionStart={() => setIsComposing(true)}
-      onCompositionEnd={() => setIsComposing(false)}
-      placeholder="新しいTODOを入力"
-    />
+    <div className="mb-4">
+        <input
+        type="text"
+        value={newTodoText}
+        onChange={e => setNewTodoText(e.target.value)}
+        onKeyDown={e => {
+            if (!isComposing && e.key === 'Enter' && newTodoText.trim()) {
+            onAdd(newTodoText.trim());
+            setNewTodoText('');
+            }
+        }}
+        onCompositionStart={() => setIsComposing(true)}
+        onCompositionEnd={() => setIsComposing(false)}
+        placeholder="新しいTODOを入力"
+        className="shadow-md p-2 rounded border w-full"
+        />
+    </div>
   );
 };
 

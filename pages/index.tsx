@@ -32,8 +32,8 @@ const IndexPage: React.FC = () => {
   };
 
   return (
-    <div>
-      <h1>TODO アプリ</h1>
+    <div className="bg-gray-100 min-h-screen p-10 font-sans">
+      <h1 className="text-2xl font-bold mb-5">TODO アプリ</h1>
       <TodoInput onAdd={addTodo} />
       <ul>
         {todos.map((todo) => (
