@@ -2,11 +2,11 @@
 
 import React, { useState } from 'react';
 
-type TodoInputProps = {
+export type TodoInputProps = {
   onAdd: (text: string) => void;
 };
 
-const TodoInput: React.FC<TodoInputProps> = ({ onAdd }) => {
+export const TodoInput: React.FC<TodoInputProps> = ({ onAdd }) => {
   const [newTodoText, setNewTodoText] = useState('');
   const [isComposing, setIsComposing] = useState(false);
 
@@ -30,5 +30,3 @@ const TodoInput: React.FC<TodoInputProps> = ({ onAdd }) => {
     </div>
   );
 };
-
-export default TodoInput;

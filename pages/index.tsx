@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import TodoInput from '../components/TodoInput';
-import TodoItem from '../components/TodoItem';
+import { TodoInput } from '../components/TodoInput';
+import { TodoItem } from '../components/TodoItem';
 import { Todo, initialTodos } from '../types/todo';
 
 const IndexPage: React.FC = () => {

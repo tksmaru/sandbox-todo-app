@@ -3,7 +3,7 @@
 import React from 'react';
 import { Todo } from '../types/todo';
 
-type TodoItemProps = {
+export type TodoItemProps = {
   todo: Todo;
   onToggle: () => void;
   onArchive: () => void;
@@ -12,7 +12,7 @@ type TodoItemProps = {
   onMouseLeave: () => void;
 };
 
-const TodoItem: React.FC<TodoItemProps> = ({ todo, onToggle, onArchive, isHovered, onMouseEnter, onMouseLeave }) => {
+export const TodoItem: React.FC<TodoItemProps> = ({ todo, onToggle, onArchive, isHovered, onMouseEnter, onMouseLeave }) => {
   return (
     <li
       onMouseEnter={onMouseEnter}
@@ -40,5 +40,3 @@ const TodoItem: React.FC<TodoItemProps> = ({ todo, onToggle, onArchive, isHovere
     </li>
   );
 };
-
-export default TodoItem;
